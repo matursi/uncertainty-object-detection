@@ -18,18 +18,17 @@ A local protobuf directory, if necessary (I needed one), that is compatible with
 
 The figures were also created using jupyter-notebook.  All relevant notebooks were put into a file, so we start within the notebooks directory space, and then switch to the necessary files.  So your workspace directory, which includes all the files to be used here, should look something like this: 
 
--<b>workspace</b>
-	-paper (file with my paper)  
-    		- *bunch of pictures
-   		- *quantifying-uncertainty.* files
-	-notebook
+|<b>workspace</b>
+|
+	|_ paper
+		- bunch of pictures
+   		- quantifying-uncertainty files
+	|_ notebook
 		- big notebook for creating necessary data for this paper
-	-programs
-
-    |   |_ left-right-pass-curves
-    |       - *161 files containing notch filter results (these took a very,very long time to compute)
-    |
-    |   - evaluation_and_analysis_functions.py    
+	|_ programs
+		|_ left-right-pass-curves
+       			- 161 files containing notch filter results (these took a very,very long time to compute)
+    |  	- evaluation_and_analysis_functions.py    
     |   - visualization_and_graphics.py
     |   - cvgs_20_plus-lowpass-.npy
     |   - cvgs_20_plus-highpass-.npy
