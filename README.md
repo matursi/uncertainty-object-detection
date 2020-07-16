@@ -19,42 +19,42 @@ A local protobuf directory, if necessary (I needed one), that is compatible with
 The figures were also created using jupyter-notebook.  All relevant notebooks were put into a file, so we start within the notebooks directory space, and then switch to the necessary files.  So your workspace directory, which includes all the files to be used here, should look something like this: 
 
 |<b>workspace</b>
-|
+
 	|_ paper
-		- bunch of pictures
-   		- quantifying-uncertainty files
+	|	- bunch of pictures
+   	|	- quantifying-uncertainty files
 	|_ notebook
-		- big notebook for creating necessary data for this paper
+	|	- big notebook for creating necessary data for this paper
 	|_ programs
-		|_ left-right-pass-curves
-       			- 161 files containing notch filter results (these took a very,very long time to compute)
-    |  	- evaluation_and_analysis_functions.py    
-    |   - visualization_and_graphics.py
-    |   - cvgs_20_plus-lowpass-.npy
-    |   - cvgs_20_plus-highpass-.npy
-    |   - cvgs_20_bandpass_inverse-notch-10.npy
-    |   - cvgs_20_bandpass_inverse-notch-05.npy
-    |_ DIGITS
-    |   |_ digits
-    |       |_jobs
-    |           |_20181112-163907-b425 (this is where my detector is)
-    |_ caffe
-    |   |_ python
-    |   |_ models
-    |       |_ bvlc_refference_detectnet (yes I had two f's in refference)
-    |           |_ deploy.prototxt
-    |
-    |_ train
-    |   |_labels (#2853 images)
-    |   |_images
-    |
-    |_ val
-    |   |_labels (#243 images)
-    |   |_images
-    |
-    |_ test
-        |_labels (#603 images)
-        |_images
+	|	|_ left-right-pass-curves
+       	|		- 161 files containing notch filter results (these took a very,very long time to compute)
+	| 	- evaluation_and_analysis_functions.py   
+	|	- visualization_and_graphics.py
+    	|   	- cvgs_20_plus-lowpass-.npy
+    	|   	- cvgs_20_plus-highpass-.npy
+    	|   	- cvgs_20_bandpass_inverse-notch-10.npy
+    	|   -	 cvgs_20_bandpass_inverse-notch-05.npy
+    	|_ DIGITS
+    	|   	|_ digits
+    	|       	|_jobs
+    	|           		|_20181112-163907-b425 (this is where my detector is)
+    	|_ caffe
+    	|   	|_ python
+    	|   	|_ models
+    	|       	|_ bvlc_refference_detectnet (yes I had two f's in refference)
+    	|           		- deploy.prototxt
+    	|
+    	|_ train
+    	|   	|_labels (#2853 images)
+    	|   	|_images
+    	|
+    	|_ val
+    	|   	|_labels (#243 images)
+    	|   	|_images
+    	|
+    	|_ test
+        	|_labels (#603 images)
+        	|_images
 
 
 Before you begin, make sure you have paths to the following in the very beginning of the  evaluation_and_analysis_functions library:
