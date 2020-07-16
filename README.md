@@ -1,32 +1,31 @@
-This is a README file containing the information on each of the functions in evaluation_and_analysis_functions.py and visualize_data.py.  
+This is a README file containing the functions I used for a fourier analysis approach to uncertainty quantification in object detection.  I will be periodically updating this section and only include programs that I know have been tested.
 
-Computer and software requirements:
+<h2> Computer and software requirements </h2>
+
 Follow very carefully the instructions there! I will include links to the tutorials and websites that were helpful to me in installing the software that is used.
-You need a computer that had decent running memory space. At least 8gb, and 12 gb is comfortable.  
+You need a computer that had decent running memory space. At least 8gb, and 12 gb is comfortable.  You also will need an NVIDIA GPU if you want to train and test your models.
 
 The code is written in python 2.7, or some variation of python 2, since the DIGITs software that was used was with python 2.  You will also need an Nvidia gpu to do work at a reasonable speed if you want to use the DIGITs software.  However, you can train the models on your own without the GUI framework provided by DIGITs.
 DIGITS 6.11: You can download this version in the Nvidia DIGITS github: https://github.com/NVIDIA/DIGITS
 
+While DIGITS with docker was recommended, I had to tweak some of the numbers in the detectnet model (mostly changing the maximum object count from 50 to 250, or changing the IOU threshold to something higher than 0.5 because bounding boxes for cars could significantly overlap), so I opted for a local digits directory instead.  Another reason for the local DIGITS is that you can save your models within their directory and access them for additional analysis.  
 
-  While DIGITS with docker was recommended, I had to tweak some of the numbers in the detectnet model (mostly changing the maximum object count from 50 to 250, or changing the IOU threshold to something higher than 0.5 because bounding boxes for cars could significantly overlap), so I opted for a local digits directory instead.  Another reason for the local DIGITS is that you can save your models within their directory and access them for additional analysis.  
+A local caffe directory.   See here: https://github.com/BVLC/caffe
 
-A local caffe directory.  I used a caffe version distinct from the one in my computer because of compatibility issues  with my own computer vs the needed specifications of DIGITs.  Follow carefully the instructions there as well. My .prototxt files were saved in this local caffe directory.
+I used a caffe version distinct from the one in my computer because of compatibility issues  with my own computer vs the needed specifications of DIGITs.  Follow carefully the instructions there as well. My .prototxt files were saved in this local caffe directory.
 
 A local protobuf directory, if necessary (I needed one), that is compatible with all the above. This is needed to be able to run DIGITS.
 
 The figures were also created using jupyter-notebook.  All relevant notebooks were put into a file, so we start within the notebooks directory space, and then switch to the necessary files.  So your workspace directory, which includes all the files to be used here, should look something like this: 
 
--  workspace
-    |_ paper (file with my paper)
-    |   
-    |   - *bunch of pictures
-    |
-    |   - *quantifying-uncertainty.* files
-    |
-    |_ notebooks
-    |   - big notebook for creating necessary data for this paper
-    |
-    |_ programs
+-<b>workspace</b>
+	-paper (file with my paper)  
+    		- *bunch of pictures
+   		- *quantifying-uncertainty.* files
+	-notebook
+		- big notebook for creating necessary data for this paper
+	-programs
+
     |   |_ left-right-pass-curves
     |       - *161 files containing notch filter results (these took a very,very long time to compute)
     |
