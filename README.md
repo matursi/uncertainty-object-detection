@@ -2,19 +2,19 @@ This is a README file containing the functions I used for a fourier analysis app
 
 <h2> Computer and software requirements </h2>
 
-Follow very carefully the instructions there! I will include links to the tutorials and websites that were helpful to me in installing the software that is used.
-You need a computer that had decent running memory space. At least 8gb, and 12 gb is comfortable.  You also will need an NVIDIA GPU if you want to train and test your models.
+ I will include links to the tutorials and websites that were helpful to me in installing the software that is used.
+You need a computer that had decent running memory space. At least 8gb, and 12 gb is comfortable.  You also will need an NVIDIA GPU if you want to train and test your models.  You also need CUDA (my version was 10.2).  
 
 The code is written in python 2.7, or some variation of python 2, since the DIGITs software that was used was with python 2.  You will also need an Nvidia gpu to do work at a reasonable speed if you want to use the DIGITs software.  However, you can train the models on your own without the GUI framework provided by DIGITs.
-DIGITS 6.11: You can download this version in the Nvidia DIGITS github: https://github.com/NVIDIA/DIGITS
+DIGITS 6.11: You can download this version in the Nvidia DIGITS github: https://github.com/NVIDIA/DIGITS.
 
-While DIGITS with docker was recommended, I had to tweak some of the numbers in the detectnet model (mostly changing the maximum object count from 50 to 250, or changing the IOU threshold to something higher than 0.5 because bounding boxes for cars could significantly overlap), so I opted for a local digits directory instead.  Another reason for the local DIGITS is that you can save your models within their directory and access them for additional analysis.  
+While DIGITS with docker was recommended, I had to tweak some of the numbers in the detectnet model (mostly changing the maximum object count from 50 to 250, or changing the IOU threshold to something higher than 0.5 because bounding boxes for cars could significantly overlap), so I opted for a local digits directory instead.  Another reason for the local DIGITS is that you can save your models within their directory and access them for additional analysis. 
 
 A local caffe directory.   See here: https://github.com/BVLC/caffe
 
 I used a caffe version distinct from the one in my computer because of compatibility issues  with my own computer vs the needed specifications of DIGITs.  Follow carefully the instructions there as well. My .prototxt files were saved in this local caffe directory.
 
-A local protobuf directory, if necessary (I needed one), that is compatible with all the above. This is needed to be able to run DIGITS.
+A local protobuf directory, if necessary (I needed one), that is compatible with all the above. This is needed to be able to run DIGITS.  If you plan to use DIGITS for training, then follow the instructions given carefully when installing not just digits, but also your local caffe depository and the protobuff (if 
 
 The figures were also created using jupyter-notebook.  All relevant notebooks were put into a file, so we start within the notebooks directory space, and then switch to the necessary files.  So your workspace directory, which includes all the files to be used here, should look something like this: 
 
